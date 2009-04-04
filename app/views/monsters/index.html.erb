@@ -1,0 +1,27 @@
+<style>
+  body {
+    background-color: #541C3F;
+    color: #eee;
+  }
+  
+  img {
+    width: 200px;
+  }
+  
+  ul li.monster {
+    list-style-type:none;
+    margin-bottom: 10px;
+  }
+    
+</style>
+
+<h1>Monsters</h1>
+
+<ul>
+<% @monsters.each do |monster| %>
+  <li class="monster">
+    <div class="name"><%=h monster.name %><div>
+    <img src="<%= monster.picture_url %>" />
+  </li>
+<% end %>
+</ul>
