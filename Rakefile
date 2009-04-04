@@ -8,10 +8,3 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
-
-begin
-  require 'vlad'
-  Vlad.load(:app => "thin", :scm => "git", :web => "nginx")
-rescue LoadError
-  # do nothing
-end

@@ -1,5 +1,9 @@
-set :application, "simple"
-set :domain, "internationalhouseofpictures.com"
-set :deploy_to, "/data/apps/simple"
-set :repository, 'http://github.com/probablycorey/rails-sample.git
-'
+set :application, "sample"
+set :deploy_to, "/data/apps/#{application}"
+
+set :scm, :git
+set :repository,  "git://github.com/probablycorey/rails-sample.git"
+
+set :user, "mr_app"
+
+server "ec2-174-129-222-40.compute-1.amazonaws.com", :app, :web, :db, :primary => true
