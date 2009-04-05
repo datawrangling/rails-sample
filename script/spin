@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
-thin --Config ./config/thin.yml start
+system "thin --Config #{File.join File.dirname(__FILE__), '../config/thin.yml'} start"
